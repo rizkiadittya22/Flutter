@@ -5,65 +5,54 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         elevation: 1,
         title: Text(
           'Instagram KW',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 32,
           ),
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.favorite_border, color: Colors.black),
-            onPressed: () {
-              // Aksi untuk tombol suka belum diimplementasikan
-            },
+            icon: Icon(Icons.favorite_border, color: Colors.white),
+            onPressed: null,
           ),
           IconButton(
-            icon: Icon(Icons.chat_bubble_outline, color: Colors.black),
-            onPressed: () {
-              // Aksi untuk tombol pesan belum diimplementasikan
-            },
+            icon: Icon(Icons.chat_bubble_outline, color: Colors.white),
+            onPressed: null,
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-          Image.asset()
-          'assets',
-          width: 150,
-          height: 150,
+      body: Container(
+        color: Colors.black,
+        child: Center(
+          child: Image.asset('assets/images/1.jpg',
+          fit: BoxFit.cover,
+          width: 200,
+          height: 300,),
         ),
-        SizedBox(height: 20),
-        ),
-
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        currentIndex: 0,
-        onTap: (index) {
-          // Logika navigasi belum diimplementasikan
-        },
+        backgroundColor: Colors.black,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.home, color: Colors.white,),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+            icon: Icon(Icons.search, color: Colors.white,),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.video_library_outlined),
-            label: 'Reels',
+            icon: Icon(Icons.video_library_outlined, color: Colors.white,),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.person, color: Colors.white,),
+            label: '',
           ),
         ],
       ),
