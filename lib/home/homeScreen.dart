@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,16 +28,27 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Container(
         color: Colors.black,
-        child: Center(
-          child: Image.asset('assets/images/1.jpg',
-          fit: BoxFit.cover,
-          width: 200,
-          height: 300,),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/1.jpg'),
+              SizedBox(height: 20,),
+              Image.asset('assets/images/2.jpg'),
+              SizedBox(height: 20,),
+              Image.asset('assets/images/3.jpg'),
+              SizedBox(height: 20,),
+              Image.asset('assets/images/4.jpg'),
+              SizedBox(height: 20,),
+              Image.asset('assets/images/5.jpg'),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.black,
+
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, color: Colors.white,),
